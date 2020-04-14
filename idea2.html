@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>能源守護者ENERGY GUARD</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/matchgame.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/idea_css.css" rel="stylesheet">
+
+    <!-- BODY -->
+    <style>
+        .sslider > * {
+            transition: ease all .7s;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+            font-family: 微軟正黑體;
+            background: #a0a6cb;
+        }
+
+        #aboutus,#game{
+            text-align: center;
+        }
+
+        .home{
+            position: relative;
+            height: 100%;
+            min-height: 100%;
+            width: 100%;
+            background: #38295b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+        }
+        .home-bottom {
+            position: absolute;
+            z-index: 3;
+            width: 100%;
+            left: 0;
+            bottom: 50px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        .home-bottom p{
+            color: #FFFFFF;
+            font-size: 15px;
+            opacity: 0;
+            animation: twinkle2 2.5s 6s linear infinite;
+        }
+        @keyframes twinkle2{
+            0%{opacity: 0;}
+            50%{opacity: 1;}
+            100%{opacity: 0}
+        }
+
+        .home-bottom a{
+            border-radius: 50%;
+            border: 2px solid #FFFFFF;
+            padding: 7px 10px;
+            color: #FFFFFF;
+            -webkit-transition: 0.2s background linear;
+            -moz-transition: 0.2s background linear;
+            transition: 0.2s background linear;
+            animation:twinkle 2.5s 6s linear infinite;
+            box-shadow:0px 0px 0px 0px #ffffff;
+        }
+        .home-bottom a:hover {
+            background-color: #fff;
+            color: #121212;
+            text-decoration: none;
+            animation: none;
+        }
+        @keyframes twinkle{
+            0%{background-color:;box-shadow:0px 0px 0px 0px #ffffff;}
+            50%{background-color: #fff;color: #121212;box-shadow:0px 0px 12px 4px #ffffff;}
+            100%{background-color:;box-shadow:0px 0px 0px 0px #ffffff;}
+        }
+
+        /*Navbar*/
+        .nav-link {
+            color: rgba(255,255,255,.7);
+        }
+        .fixed-nav{
+            z-index: 99;
+            width: 100%;
+        }
+
+        .navbar-nav .dropdown-menu{
+            background-color: #bccdff;
+            border: none;
+            border-radius: .65rem;
+        }
+        .dropdown-item{
+            border: #bccdff 4px dotted;
+        }
+        .dropdown-item:hover{
+            background-color: rgba(63,28,87,0);
+            border: #38295b 4px dotted;
+            border-radius: .65rem;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .sticky + section:nth-child(4) {
+            margin-top: 96px;
+        }
+        .logo_img{
+            height: 70px;
+            padding: 5px 3px;
+        }
+    </style>
+
+    <!-- 能源分頁-->
+    <style>
+        /*能源分頁*/
+        .water{
+            height: %;
+        }
+
+        .water h1{
+            font-weight: bolder;
+        }
+
+        .water h2,h3,h4,h5{
+            line-height: 1.5;
+        }
+
+        .classbtn a{
+            color: #f8f9fa;
+            background-color: transparent;
+            background-image: none;
+            border-color: #f8f9fa;
+            margin: 0px 10px;
+        }
+        .classbtn a:hover {
+            color: #212529;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        .sslider{
+            width: 100%;
+            height: ;
+            min-height: 100%;
+            background: #a0a6cb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 50px;
+
+        }
+        .sslider a{
+            color: #f8f9fa;
+            background-color: transparent;
+            background-image: none;
+            border-color: #f8f9fa;
+            margin: 0px 10px;
+        }
+
+
+        .menu{
+            position: fixed;
+            right: 30px;
+            top: 400px;
+            color: #fff;
+            transform: translate(0, -50%);
+            z-index: 100;
+        }
+
+        .menu > ul{
+            padding-left: 0;
+            list-style: none;
+            display: block;
+            position: relative;
+            width: 20px;
+        }
+        .menu > ul > li{
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            padding: 3px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .dark{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            background: black;
+            opacity: 0;
+        }
+        .dark.onclickd{
+            opacity: 0.5;
+            z-index: 101;
+        }
+        .sdetail{
+            z-index: -11;
+            opacity: 0;
+            background: #7BAABE;
+            border-radius: 25px;
+            position: fixed;
+            top: 120px;
+            left: 200px;
+            width: 75%;
+        }
+        .sdetail.onclickd{
+            opacity: 1;
+            z-index: 102;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .class_detail01{
+            position: absolute;
+            top:20px;
+            left: 0px;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .class_detail02{
+            position: absolute;
+            top: 70px;
+            left: 320px;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .class_detail03{
+            position: absolute;
+            top:250px;
+            left:90px;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .classes{
+            color: #FFFFFF;
+        }
+
+        .introoo:hover{
+        }
+
+        .introimg{
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+            -webkit-animation-name: fadeIn,colorchange;
+            animation-name: fadeIn,colorchange;
+            -webkit-animation-duration: 7s,4s;
+            animation-duration: 7s,4s;
+            -webkit-animation-iteration-count:1,infinite;
+            animation-iteration-count:1,infinite;
+            -webkit-animation-fill-mode: forwards ;
+            animation-fill-mode: forwards ;
+            animation-delay: 4s;
+            -webkit-animation-delay: 4;
+            -o-animation-delay: 4s;
+            -moz-animation-delay: 4s;  /**延迟动画**/
+            filter: drop-shadow(0px -20px 25px rgba(225,255,164,0.57));
+        }
+
+    </style>
+
+    <!--影片黑屏按鈕-->
+    <style>
+        .modal-backdrop{
+            z-index: 100!important;
+            background-color: #FFFFFF;
+        }
+        .modal-dialog{
+            max-width: 700px;
+        }
+        .modal-header{
+            border-bottom: 1px solid #FFFFFF;
+        }
+        .modal-footer{
+            border-top: 1px solid #FFFFFF;
+        }
+        .modal-content{
+            background-color: #18293b;
+        }
+        .close{
+            color: #f8f9fa;
+        }
+        .modal-body .col-6,.modal-body .col-12{
+            margin-top:20px;
+        }
+        .modal-body{
+            color: #FFFFFF;
+            line-height: 2;
+        }
+    </style>
+
+    <!--提示文本-->
+    <style>
+        .note{
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            bottom:-70px;
+            opacity: 1;
+            color: rgba(76,80,100,0.84);
+        }
+    </style>
+
+    <!--footer-->
+    <style>
+        .footer {
+            color: rgba(63,28,87,0.92);
+            z-index: 15;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            top: -5%;
+        }
+        #gotop {
+            opacity: 0.7;
+            font-size: 30px;
+            position:fixed;
+            z-index:90;
+            right:30px;
+            bottom:31px;
+            display:none;
+            width:50px;
+            height:50px;
+            color:#fff;
+            background: #38295b;
+            line-height:50px;
+            border-radius:50%;
+            transition:all 0.5s;
+            text-align: center;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            -webkit-transition: 0.2s background linear;
+            -moz-transition: 0.2s background linear;
+            transition: 0.2s background linear;
+        }
+        #gotop:hover{
+            opacity: 1;
+        }
+    </style>
+
+
+</head>
+<body>
+<!-- Modal -->
+<section class="move-box">
+    <div class="modal fade" id="character-comic01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>源源不盡的水——水力發電</h2>
+                            </div>
+                            <div class="col-12">
+                                水力發電（英文：Hydropower）是運用水的勢能轉換成電能的發電方式，其原理是利用水位的落差(勢能)在重力作用下流動(動能)，
+                                例如從河流或水庫等高位水源引水流至較低位處，流的水流推動輪機使之旋轉，帶動發電機發電。<br><br>
+
+                                水力發電技術簡單而且完備，許多國家於水力發電之基礎工業，諸如水輪機、閥、水閘、發電機和相關電力設備等之製造，均已非常完善。
+                                除了提供廉價電力外，還有下列優點：管制洪水氾濫、提供灌溉用水、利於河流航運、提供尖峰時段電力調度。<br><br>
+                                而水力發電的建設也有許多種類，如：水庫式水力發電、川流式水力發電、調整池式水力發電、潮汐發電、抽水蓄能式水力發電等等，因此在提供電量上穩定且龐大。由於技術成熟，是目前人類社會應用最廣泛的可再生能源。
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>來去自如的風——風力發電</h2>
+                            </div>
+                            <div class="col-12">
+                                風能是潔淨的能源來源，因其豐富、取之不盡且廣泛分佈的特性，
+                                來提供風力發電所需的動力來源——風力發電是藉由空氣的流動 (風)，通過風車經特殊設計的葉片始其旋轉，推動發電機產生電力。<br><br>
+
+                                風能已成為現有能源中最便宜的可更新的能源。由於風能是由風的立方變化數構成（如風速的立方數），
+                                其經濟效益取決於風場的風力狀況，所以安裝越多風機的風場具有越高的經濟效益。<br><br>
+
+                                近年來，很多國家計劃把大量消耗的電量由風力發電來提供，而德國與丹麥就是其中之一。
+                                在2017年，風力發電於歐盟地區已佔總發電量的11.7%，並首次超過水力發電量成為歐盟最大的再生能源電力來源，而其中在丹麥的風力發電更是佔丹麥用電量43.4%。由此可見，風力發電將成為一大趨勢。
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic03" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>台灣發電量最大——火力發電</h2>
+                            </div>
+                            <div class="col-12">
+                                化石燃料能源是指以石油、天然氣、煤為代表的含碳能源，屬於不可再生的一次能源。<br><br>
+
+                                化石燃料能源最常用來發電的模式就是火力發電。在火力發電廠中，各種化石燃料如煤、燃料油、天然氣或油頁岩中儲存的化學能被逐步轉換成熱能、機械能最後變成電能，供向四方。
+                                <br><br>
+
+                                火力發電廠可以持續地大量發電，在許多國家，大部分電能均由火力發電廠提供。
+                                例如：臺灣台中火力發電廠目前是世界第二大燃煤火力發電廠，同時也是台灣發電量最大的發電廠。<br><br>
+
+                                然而，煤燃燒是空氣污染以及酸雨的罪魁禍首，而燃煤所排出的二氧化碳是溫度氣體之一，會做成溫室效應，
+                                現在已經可以肯定人為排放溫室氣體是近期全球暖化的主因，所以排放二氧化碳與全球暖化有極大關係，如何在環境維護下提供足夠的電力成為現在很重要的課題。
+
+
+
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic04" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>所有能源的源頭——太陽能</h2>
+                            </div>
+                            <div class="col-12">
+                                廣義上的太陽能是地球上許多能量的來源，如風能、化學能、水的勢能。化石燃料可以稱為遠古的太陽能。太陽能發電是一種新興的可再生能源。<br><br>
+
+                                太陽能技術分為有源（主動式）及無源（被動式）兩種。
+                                有源的例子有太陽能光電及光熱轉換，使用電力或機械設備作太陽能收集，而這些設備是依靠外部能源運作的，因此稱為有源。
+                                無源的例子有在建築物引入太陽光作照明等，當中是利用建築物的設計、選擇所使用物料等達至利用太陽能的目的，由於當中的運作無需由外部提供能源，因此稱為無源。<br><br>
+
+                                太陽能資源豐富，無需運輸，但生產太陽能板的過程對環境有嚴重且不可逆的污染，且會造成飛航安全。此外，目前利用太陽能的各種技術都具有成本極高的缺點，因此資本投資不菲。
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic05" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>擁有龐大能量的原子核——核能發電</h2>
+                            </div>
+                            <div class="col-12">
+                                核能是經由質量的轉化而從原子核釋放出來的能量，主要透過核分裂與核融合反應釋放能量。核能在反應爐中被轉化為熱能，熱能將水變為蒸汽推動汽輪發電機組發電。<br><br>
+
+
+                                根據國際能源署的資料，2007年全球電力有13.8%由核能提供。由此可見，核能發電也是一個目前主要的發電方式。
+                                而核子動力相關的重大事故包括三哩島事件（1979年）、車諾比核事故（1986年）、福島第一核電廠事故（2011年）和一些核子動力潛艇事故。<br><br>
+
+                                美國每年產生的核能居全世界首位，美國人消耗的電能中約20%來自於核能。如果按核能占總電能的百分比來看，法國核能則為全球第一。
+                                2016年的調查顯示，核能滿足了72%的法國電能需求。
+                                歐盟需要的26%的電能來自核反應。各國的核能政策均各有不同，有些反對依賴核能、有些則利用核能降低成本以滿足社會大眾。
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic06" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>大自然的有機物——生質能</h2>
+                            </div>
+                            <div class="col-12">
+                                生質能泛指所有有機物，其應用方式為經由各式自然或人為化學反應，將其中蘊含之化學能釋出，轉化為供人類使用之熱能。生質能轉換主要有三種：<br>
+                                1.物理轉換包括將廢棄物分類壓縮，從植物中搾油等等。<br>
+                                2.熱轉換包括了熱解、燃燒、氣化等，可以產生熱、氣體與油。其中燃燒是最常用。<br>
+                                3.生物轉換利用微生物或酵素將生質轉化成酒精、生質燃油或沼氣。<br><br>
+
+                                生質能具有多項優點，如可提供低硫燃料，降低空氣污染；使用廢物、家畜糞便生產能量，可減輕廢物處理，減少環境公害；但是因為生質能原料之含水量偏高（50～95％），故轉換效率偏低。<br><br>
+
+                                目前台灣生質能發電應用有垃圾焚化發電及沼氣發電二大類。前者以成為我國多數焚化廠之營運常態；
+                                後者則以豬糞尿厭氧消化處理為先驅，持續開發烹調、發電及運輸。
+                            </div>
+                            <div class="col-12">
+                                參考來源：維基百科、能源教育資訊網
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="fixed-nav sticky" id="fixed-nav">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #38295b">
+        <a class="navbar-brand" href="index.html"><img src="images/LOGO_top.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 20px">
+            <ul class="navbar-nav mr-auto"></ul>
+            <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">回教材網站</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pagebtn" href="#part01">教材分析階段</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pagebtn" href="#part03">教材設計製作階段</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </nav>
+</section>
+<!-- Swiper -->
+<section class="water" style="margin-top: 96px">
+    <article class="sslider" id="part01">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 my-4"><h1>教材分析階段</h1></div><!-- /.col-lg-4 -->
+                <div class="col-12 my-4"><img src="images/流程.png" alt="" width="60%"></div><!-- /.col-lg-4 -->
+                <div class="link01">
+                    
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="sslider" id="part03">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12 my-4"><h1>教材設計製作階段</h1></div><!-- /.col-lg-4 -->
+                <div class="col-6 my-4"><div class="verson"><a href="http://edu-energy-guard.azurewebsites.net/?fbclid=IwAR0GS1FUbZkNc8Mm7WoP5m2dZVo5VIeKtMEhvSqBw082q8sdfH9OUJa-cq8" target="_blank"><h2>版本一</h2></a></div></div><!-- /.col-lg-4 -->
+                <div class="col-6 my-4"><div class="verson"><a href="http://edu-energy-guard-2.azurewebsites.net/?fbclid=IwAR0GS1FUbZkNc8Mm7WoP5m2dZVo5VIeKtMEhvSqBw082q8sdfH9OUJa-cq8" target="_blank"><h2>版本二</h2></a></div></div><!-- /.col-lg-4 -->
+                <div class="col-6 my-4"><div class="verson"><a href="http://edu-energy-guard-3.azurewebsites.net/?fbclid=IwAR0GS1FUbZkNc8Mm7WoP5m2dZVo5VIeKtMEhvSqBw082q8sdfH9OUJa-cq8" target="_blank"><h2>版本三</h2></a></div></div><!-- /.col-lg-4 -->
+                <div class="col-6 my-4"><div class="verson"><a href="http://edu-energy-guard-4.azurewebsites.net/?fbclid=IwAR0GS1FUbZkNc8Mm7WoP5m2dZVo5VIeKtMEhvSqBw082q8sdfH9OUJa-cq8" target="_blank"><h2>版本四</h2></a></div></div><!-- /.col-lg-4 -->
+            </div>
+        </div>
+    </article>
+    <div class="footer">
+        <h6>©2019 能源守護者 Energy Guard - 能源知識教學網</h6>
+    </div>
+</section>
+
+<a href="#" id="gotop">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+<script src="js/jquery.parallaxify.min.js"></script>
+
+<script type="text/javascript" src="scripts/htm5game.matchgame.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed:800,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+    });
+</script>
+
+<!-- 黑屏 -->
+<script>
+    $(".btn.cha_detail").click(function(){
+        $(".sdetail").addClass("onclickd");
+        $(".dark").addClass("onclickd");
+    });
+
+    $(".close").click(function(){
+        $(".sdetail").removeClass("onclickd");
+        $(".dark").removeClass("onclickd");
+    });
+</script>
+
+<!-- 選單出現 -->
+<script>
+    //選單出現
+    $(".menu").hide();
+    $(window).scroll(function(){
+        if($(this).scrollTop()>800){
+            $(".menu").fadeIn();
+        } else {
+            $(".menu").fadeOut();
+        }
+    });
+
+    //緩慢滑動
+    $(document).on('click', '.pagebtn', function(event){
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 850);
+    });
+</script>
+
+<!-- 固定navbar -->
+<script>
+    /*固定navbar*/
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("fixed-nav");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+<!--影片-->
+<script>
+    $(function(){
+        $('video').bind('play', function (e)
+        {
+            var video = $('video');
+            for(var i=0;i<video.length;i++)
+            {
+                if(video[i] != e.target)
+                {
+                    video[i].pause();
+                }
+            }
+        });
+    });
+</script>
+
+<!--TOP-->
+<script type="text/javascript">
+    $(function() {
+        /* 按下GoTop按鈕時的事件 */
+        $('#gotop').click(function(){
+            $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+            return false;
+        });
+
+        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 500){
+                $('#gotop').fadeIn();
+            } else {
+                $('#gotop').fadeOut();
+            }
+        });
+    });
+</script>
+
+<!--滾動浮現-->
+<script>
+    $(window).on('scroll load', function() {
+        $('.sslider > *').each(function(i) {
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight() / 8;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object) {
+                $(this).css({
+                    'opacity': '1',
+                    'transform': 'translateY(' + 0 + 'em)'
+                });
+            } else {
+                $(this).css({
+                    'opacity': '0',
+                    'transform': 'translateY(' + 2 + 'em)'
+                });
+            }
+        });
+    });
+</script>
+
+<script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+</script>
+
+<!--提示框-->
+<script>
+    $(function (){
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+
+</body>
+</html>
+
