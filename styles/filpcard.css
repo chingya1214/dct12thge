@@ -39,7 +39,7 @@
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
-
+/*
 .QA img:nth-child(1){
     animation: twinkleQA 8s 0s linear infinite;
 }
@@ -51,4 +51,4 @@
 }
 .QA img:nth-child(4){
     animation: twinkle2 2.5s linear infinite;
-}
+}*/

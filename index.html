@@ -322,8 +322,8 @@
 
         .path {
             position: relative;
-            width: 600px;
-            height: 600px;
+            width: 700px;
+            height: 700px;
             border-radius: 50%;
             background: ;
             margin: 50px auto;
@@ -345,7 +345,7 @@
 
         }
         .pp{
-            width: 20%;
+            width: 22%;
             position: absolute;
         }
         .pp>a>img:hover{
@@ -456,21 +456,21 @@
             -o-animation-delay: 1s;
             -moz-animation-delay: 1s;  /**延迟动画**/
         }
-        .chh01,.chh02,.chh03,.chh04,.chh05,.chh06{
+        /*.chh01,.chh02,.chh03,.chh04,.chh05,.chh06{
             display: none;
         }
         .chh01.onhover,.chh02.onhover,.chh03.onhover,.chh04.onhover,.chh05.onhover,.chh06.onhover {
             display: block;
-        }
+        }*/
 
         .chh-l{
             position:absolute;
-            left: -225px;
+            left: -250px;
             top:-90px;
         }
         .chh-r{
             position:absolute;
-            right: -230px;
+            right: -250px;
             top:-90px;
         }
 
@@ -509,8 +509,8 @@
 
         .sun {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             top: 100px;
             left: 100px;
 
@@ -543,7 +543,7 @@
             border-radius: 50%;
             display: block;
             animation: spin 6s infinite linear;
-            transform-origin: 50% 300px; /* 150px = path radius */
+            transform-origin: 50% 350px; /* 150px = path radius */
         }
 
         /*星空*/
@@ -635,24 +635,7 @@
 
     <style>
         .chp_img_left{
-            position: absolute;
-            top: -170px;
-            left: -450px;
-            width: 185%;
-            -webkit-animation-name: baloon_1;
-            animation-name: baloon_1;
-            -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-            -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
-            -webkit-animation-fill-mode: forwards ;
-            animation-fill-mode: forwards ;
-        }
-        .chp_img_right{
-            position: absolute;
-            top: -170px;
-            right: -400px;
-            width: 185%;
+            width: 100%;
             -webkit-animation-name: baloon_1;
             animation-name: baloon_1;
             -webkit-animation-duration: 5s;
@@ -671,19 +654,29 @@
             background-color: #FFFFFF;
         }
         .modal-dialog{
-            max-width: 700px;
+            max-width: 1400px;
         }
         .modal-header{
-            border-bottom: 1px solid #FFFFFF;
+            border-bottom: 0px solid #FFFFFF;
         }
         .modal-footer{
-            border-top: 1px solid #FFFFFF;
+            border-top: 0px solid #FFFFFF;
+            min-height: 20px;
         }
         .modal-content{
-            background-color: #18293b;
+            margin-top: 100px;
+            background: none;
+            background-image: url("images/角色介紹背景.png");
+            background-size:100% 100%;
+            background-repeat: no-repeat;
+            border: none;
         }
         .close{
             color: #f8f9fa;
+            font-size: 70px;
+        }
+        .close:hover{
+            color: #FFFFFF;
         }
         .modal-body .col-6,.modal-body .col-12{
             margin-top:20px;
@@ -691,6 +684,7 @@
         .modal-body{
             color: #FFFFFF;
             line-height: 2;
+            padding: 2rem;
         }
 
         .modal-dialog-2{
@@ -698,11 +692,15 @@
             color: black;
         }
         .modal-content-2{
+            background-image: none;
             background-color: #FFFFFF;
         }
         .close-2{
             color: #121212;
             font-size: 50px;
+        }
+        .close-2:hover{
+            color: #000000;
         }
     </style>
 
@@ -732,8 +730,8 @@
 
         .videotext{
             text-align: center;
-            position: absolute;
-            right: -30px;
+            position:relative;
+            left: -50px;
         }
 
         .videoarrow{
@@ -806,22 +804,46 @@
             width: 100%;
             text-align: center;
             position: relative;
-            top: -5%;
+            top: -6%;
         }
         #gotop {
+             opacity: 0.7;
+             font-size: 30px;
+             position:fixed;
+             z-index:90;
+             right:30px;
+             bottom:31px;
+             display:none;
+             width:50px;
+             height:50px;
+             color:#fff;
+             background: #38295b;
+             line-height:50px;
+             border-radius:50%;
+             transition:all 0.5s;
+             text-align: center;
+             box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+             -webkit-transition: 0.2s background linear;
+             -moz-transition: 0.2s background linear;
+             transition: 0.2s background linear;
+         }
+        #gotop:hover{
+            opacity: 1;
+        }
+
+        #gotop2 {
             opacity: 0.7;
             font-size: 30px;
             position:fixed;
             z-index:90;
-            right:30px;
-            bottom:31px;
+            left:0px;
+            bottom:50%;
             display:none;
             width:50px;
-            height:50px;
+            height:100px;
             color:#fff;
             background: #38295b;
             line-height:50px;
-            border-radius:50%;
             transition:all 0.5s;
             text-align: center;
             box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -829,7 +851,7 @@
             -moz-transition: 0.2s background linear;
             transition: 0.2s background linear;
         }
-        #gotop:hover{
+        #gotop2:hover{
             opacity: 1;
         }
     </style>
@@ -840,6 +862,182 @@
 <!-- Modal -->
 <section class="move-box">
     <div class="modal fade" id="character-comic01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="mr-1">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                                <img class="chp_img_left" src="images/character_01_0.png" width="100%" alt="" style="">
+                            </div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>水能源</strong></h3>
+                                <h1>瓦特</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 慣常式水力發電、水庫式水力發電、川流式水力發電、調整池式水力發電、潮汐發電、抽水蓄能式水力發電</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    出生於水能源星球的他，對於水能的操作可是聊若指掌，穩重的個性使他能臨危不亂的解決問題，擅長利用地形高低起伏製造能源、解決問題。
+                                </h4>
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center justify-content-center">
+                                <img class="chp_img_left" src="images/character_03_0.png" alt="">
+                            </div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>化石燃料能源</strong></h3>
+                                <h1>燃料大哥</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 煤炭發電、石油發電、天然氣發電</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    有龐大的財富及能力， 擅長利用地球的化石燃料製造能源，為推動經濟最重要的探員之一，也是地球上最知名的探員。
+                                </h4>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic03" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center"><img class="chp_img_left" src="images/character_04_0.png" alt=""></div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>太陽能能源</strong></h3>
+                                <h1>桑妮</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 慣太陽能電池、太陽能熱水器、太陽能泵、光電轉換</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    活潑開朗的他，面對事情總是樂觀正向，喜歡與環境和平共處，現今藉由科技發展，他的能力也大大提升，總是帶給大家滿滿的活力，感覺有用不完的體力。
+                                </h4>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic04" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                                <img class="chp_img_left" src="images/character_02_0.png" alt="">
+                            </div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>風能源</strong></h3>
+                                <h1>Wind</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 風力發電、帆船航行、滑翔翼飛行</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    開朗活潑的Wind如同風一般總是跑來跑去，喜歡旅遊的他常常搭著帆船、利用滑翔翼飛行去過許多國家，也擅長利用風力發電，不過常常會不小心吵到別人。
+                                </h4>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic05" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center justify-content-center"><img class="chp_img_left" src="images/character_05_0.png" alt="" style=""></div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>核能能源</strong></h3>
+                                <h1>赫克</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 利用可控核反應來獲取能量、核分裂、核衰變和核融合</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    十分聰明，但總是神出鬼沒，是探員中的神秘人物，有些人覺得他是好人，但另一派人認為他是壞人，擅長利用核能反應製造能源，獲得能量。
+                                </h4>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="character-comic06" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center"><img class="chp_img_left" src="images/character_06_0.png" alt="" style=""></div>
+                            <div class="col-6 pt-5">
+                                <h3><strong>生質能能源</strong></h3>
+                                <h1>修米</h1>
+                                <h4 class="mt-3">
+                                    <strong>能力： 廢棄物分類壓縮、從植物中搾油、熱轉換、生物轉換</strong>
+                                </h4>
+                                <h4 class="mt-3">
+                                    害羞內向，喜歡閱讀各式各樣的書籍，因此十分聰明，能用許多知識將廢棄物循環利用，也能用廢食用油轉化為生質柴油、利用廢水養殖微藻並生產各式燃料。
+                                </h4>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="modal fade" id="character-comic01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1065,7 +1263,7 @@
             </div>
         </div>
     </div>
-
+-->
     <div class="modal fade" id="character-comic02_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-2" role="document">
             <div class="modal-content modal-content-2">
@@ -1207,31 +1405,17 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            探員出任務(學習課程)
+                            探員出任務
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item pagebtn" href="#video">任務一</a>
-                            <a class="dropdown-item pagebtn" href="#video02">任務二</a>
-                            <a class="dropdown-item pagebtn" href="#video03">任務三</a>
-                            <a class="dropdown-item pagebtn" href="#video04">任務四</a>
-                            <a class="dropdown-item pagebtn" href="#video05">任務五</a>
-                            <a class="dropdown-item pagebtn" href="#video06">任務六</a>
+                            <a class="dropdown-item pagebtn" href="#video">水能源</a>
+                            <a class="dropdown-item pagebtn" href="#video02">化石燃料能源</a>
+                            <a class="dropdown-item pagebtn" href="#video03">太陽能能源</a>
+                            <a class="dropdown-item pagebtn" href="#video04">風能源</a>
+                            <a class="dropdown-item pagebtn" href="#video05">核能能源</a>
+                            <a class="dropdown-item pagebtn" href="#video06">生質能能源</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            六大能源
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#character01">水能源</a>
-                            <a class="dropdown-item" href="#character03">化石燃料能源</a>
-                            <a class="dropdown-item" href="#character04">太陽能能源</a>
-                            <a class="dropdown-item" href="#character02">風能源</a>
-                            <a class="dropdown-item" href="#character05">核能能源</a>
-                            <a class="dropdown-item" href="#character06">生質能能源</a>
-                        </div>
-                    </li>
-
                     <li class="nav-item">
                         <a class="nav-link pagebtn" href="#game">互動小遊戲</a>
                     </li>
@@ -1270,18 +1454,10 @@
     </div>
     <article class="sslider" id="video">
         <div class="videotitle">
-            <h1>任<br>務<br>一</h1>
+            <h1>水<br>能<br>源</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <div class="swiper-slide" style="">
-                        <div class="outgroung"><img src="images/水能_title_2.PNG" alt="" width="100%"></div>
-                        <video width="100%" controls>
-                            <source src="video/Fin.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/水問題1.png" alt="" width="100%">
@@ -1290,8 +1466,16 @@
                         <img src="images/水問題4.png" alt="" width="100%">
                     </div>
                 </div>
+                <div class="col-8 videoframe">
+                    <div class="swiper-slide" style="">
+                        <div class="outgroung"><img src="images/水能_title_2.PNG" alt="" width="100%"></div>
+                        <video width="100%" height="100%" controls>
+                            <source src="video/Fin.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
                 <div class="col-1 pt-5 videoarrow">
-                    <a href="#character01">
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic01">
                         <img src="images/認識水能探員.png" alt="" width=230px>
                     </a>
                 </div>
@@ -1301,18 +1485,10 @@
     </article>
     <article class="sslider" id="video02">
         <div class="videotitle">
-            <h1>任<br>務<br>二</h1>
+            <h1>化<br>石<br>能</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <div class="swiper-slide" style="">
-                        <div class="outgroung"><img src="images/化石_title_2.PNG" alt="" width="100%"></div>
-                        <video width="100%" controls>
-                            <source src="video/Fin_化石.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/化石問題1.png" alt="" width="100%">
@@ -1321,8 +1497,16 @@
                         <img src="images/化石問題4.png" alt="" width="100%">
                     </div>
                 </div>
+                <div class="col-8 videoframe">
+                    <div class="swiper-slide" style="">
+                        <div class="outgroung"><img src="images/化石_title_2.PNG" alt="" width="100%"></div>
+                        <video width="100%" height="100%" controls>
+                            <source src="video/Fin_化石.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
                 <div class="col-1 pt-5 videoarrow">
-                    <a href="#character03">
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic02">
                         <img src="images/認識化石探員.png" alt="" width=230px>
                     </a>
                 </div>
@@ -1332,18 +1516,10 @@
     </article>
     <article class="sslider" id="video03">
         <div class="videotitle">
-            <h1>任<br>務<br>三</h1>
+            <h1>太<br>陽<br>能</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <div class="swiper-slide" style="">
-                        <div class="outgroung"><img src="images/太陽能_title_2.PNG" alt="" width="100%"></div>
-                        <video width="100%" controls>
-                            <source src="video/Fin_太陽.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/太陽問題1.png" alt="" width="100%">
@@ -1352,8 +1528,16 @@
                         <img src="images/太陽問題4.png" alt="" width="100%">
                     </div>
                 </div>
+                <div class="col-8 videoframe">
+                    <div class="swiper-slide" style="">
+                        <div class="outgroung"><img src="images/太陽能_title_2.PNG" alt="" width="100%"></div>
+                        <video width="100%" height="100%" controls>
+                            <source src="video/Fin_太陽.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
                 <div class="col-1 pt-5 videoarrow">
-                    <a href="#character04">
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic03">
                         <img src="images/認識太陽能探員.png" alt="" width=230px>
                     </a>
                 </div>
@@ -1363,17 +1547,10 @@
     </article>
     <article class="sslider" id="video04">
         <div class="videotitle">
-            <h1>任<br>務<br>四</h1>
+            <h1>風<br>能<br>源</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <a href="#video04" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic02_1" style="">
-                        <div class="swiper-slide" style="">
-                            <img src="images/風能_title_2.PNG" alt="" width="100%">
-                        </div>
-                    </a>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/風問題1.png" alt="" width="100%">
@@ -1382,8 +1559,15 @@
                         <img src="images/風問題4.png" alt="" width="100%">
                     </div>
                 </div>
+                <div class="col-8 videoframe">
+                    <a href="#video04" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic02_1" style="">
+                        <div class="swiper-slide" style="">
+                            <img src="images/風能_title_2.PNG" alt="" width="100%">
+                        </div>
+                    </a>
+                </div>
                 <div class="col-1 pt-5 videoarrow">
-                    <a href="#character02">
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic04">
                         <img src="images/認識風能探員.png" alt="" width=230px>
                     </a>
                 </div>
@@ -1393,17 +1577,10 @@
     </article>
     <article class="sslider" id="video05">
         <div class="videotitle">
-            <h1>任<br>務<br>五</h1>
+            <h1>核<br>能<br>源</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <a href="#video05" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic03_1" style="">
-                        <div class="swiper-slide" style="">
-                            <img src="images/核能_title_2.png" alt="" width="100%">
-                        </div>
-                    </a>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/核問題1.png" alt="" width="100%">
@@ -1412,8 +1589,15 @@
                         <img src="images/核問題4.png" alt="" width="100%">
                     </div>
                 </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#character05">
+                <div class="col-8 videoframe">
+                    <a href="#video05" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic03_1" style="">
+                        <div class="swiper-slide" style="">
+                            <img src="images/核能_title_2.png" alt="" width="100%">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-1 pt-5 videoarrow" >
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic05">
                         <img src="images/認識核能探員.png" alt="" width=230px>
                     </a>
                 </div>
@@ -1423,17 +1607,10 @@
     </article>
     <article class="sslider" id="video06">
         <div class="videotitle">
-            <h1>任<br>務<br>六</h1>
+            <h1>生<br>質<br>能</h1>
         </div>
         <div class="container">
             <div class="row pt-3">
-                <div class="col-8 videoframe">
-                    <a href="#video05" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic04_1" style="">
-                        <div class="swiper-slide" style="">
-                            <img src="images/生質能_title_2.png" alt="" width="100%">
-                        </div>
-                    </a>
-                </div>
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
                         <img src="images/生質問題1.png" alt="" width="100%">
@@ -1442,8 +1619,15 @@
                         <img src="images/生質問題4.png" alt="" width="100%">
                     </div>
                 </div>
+                <div class="col-8 videoframe">
+                    <a href="#video05" class="btn cha_detail comicbody" data-toggle="modal" data-target="#character-comic04_1" style="">
+                        <div class="swiper-slide" style="">
+                            <img src="images/生質能_title_2.png" alt="" width="100%">
+                        </div>
+                    </a>
+                </div>
                 <div class="col-1 pt-5 videoarrow">
-                    <a href="#character06">
+                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic06">
                         <img src="images/認識生質能探員.png" alt="" width="230px">
                     </a>
                 </div>
@@ -1452,134 +1636,8 @@
         </div>
     </article>
 
-    <article class="sslider" id="character01">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 d-flex align-items-center">
-                    <img class="chp_img_left" src="images/character_01_0.png" alt="" style="">
-                </div>
-                <div class="col-7 pt-5">
-                    <h3><strong>水能源</strong></h3>
-                    <h1>瓦特</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 慣常式水力發電、水庫式水力發電、川流式水力發電、調整池式水力發電、潮汐發電、抽水蓄能式水力發電</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        出生於水能源星球的他，對於水能的操作可是聊若指掌，穩重的個性使他能臨危不亂的解決問題，擅長利用地形高低起伏製造能源、解決問題。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video02" class="btn">與探員繼續出任務</a>
-                        <a href="#character01" class="btn cha_detail" data-toggle="modal" data-target="#character-comic01">來更加了解他吧</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article class="sslider" id="character03">
-        <div class="container">
-            <div class="row">
-                <div class="col-7 pt-5">
-                    <h3><strong>化石燃料能源</strong></h3>
-                    <h1>燃料大哥</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 煤炭發電、石油發電、天然氣發電</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        有龐大的財富及能力， 擅長利用地球的化石燃料製造能源，為推動經濟最重要的探員之一，也是地球上最知名的探員。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video03" class="btn">與探員繼續出任務</a>
-                        <a href="#character03" class="btn cha_detail" data-toggle="modal" data-target="#character-comic03">來更加了解他吧</a>
-                    </div>
-                </div>
-                <div class="col-5 d-flex align-items-center justify-content-center"><img class="chp_img_right" src="images/character_03_0.png" alt=""></div>
-            </div>
-        </div>
-    </article>
-    <article class="sslider" id="character04">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 d-flex align-items-center"><img class="chp_img_left" src="images/character_04_0.png" alt=""></div>
-                <div class="col-7 pt-5">
-                    <h3><strong>太陽能能源</strong></h3>
-                    <h1>桑妮</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 慣太陽能電池、太陽能熱水器、太陽能泵、光電轉換</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        活潑開朗的他，面對事情總是樂觀正向，喜歡與環境和平共處，現今藉由科技發展，他的能力也大大提升，總是帶給大家滿滿的活力，感覺有用不完的體力。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video04" class="btn">與探員繼續出任務</a>
-                        <a href="#character04" class="btn cha_detail" data-toggle="modal" data-target="#character-comic04">來更加了解他吧</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article class="sslider" id="character02">
-        <div class="container">
-            <div class="row">
-                <div class="col-7 pt-5">
-                    <h3><strong>風能源</strong></h3>
-                    <h1>Wind</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 風力發電、帆船航行、滑翔翼飛行</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        開朗活潑的Wind如同風一般總是跑來跑去，喜歡旅遊的他常常搭著帆船、利用滑翔翼飛行去過許多國家，也擅長利用風力發電，不過常常會不小心吵到別人。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video05" class="btn">與探員繼續出任務</a>
-                        <a href="#character02" class="btn cha_detail"  data-toggle="modal" data-target="#character-comic02">來更加了解他吧</a>
-                    </div>
-                </div>
-                <div class="col-5 d-flex align-items-center"><img class="chp_img_right" src="images/character_02_0.png" alt=""></div>
-            </div>
-        </div>
-    </article>
-    <article class="sslider" id="character05">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 d-flex align-items-center justify-content-center"><img class="chp_img_left" src="images/character_05_0.png" alt="" style=""></div>
-                <div class="col-7 pt-5">
-                    <h3><strong>核能能源</strong></h3>
-                    <h1>赫克</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 利用可控核反應來獲取能量、核分裂、核衰變和核融合</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        十分聰明，但總是神出鬼沒，是探員中的神秘人物，有些人覺得他是好人，但另一派人認為他是壞人，擅長利用核能反應製造能源，獲得能量。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video06" class="btn">與探員繼續出任務</a>
-                        <a href="#character05" class="btn cha_detail" data-toggle="modal" data-target="#character-comic05">來更加了解他吧</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article class="sslider" id="character06">
-        <div class="container">
-            <div class="row">
-                <div class="col-7 pt-5">
-                    <h3><strong>生質能能源</strong></h3>
-                    <h1>修米</h1>
-                    <h4 class="mt-3">
-                        <strong>能力： 廢棄物分類壓縮、從植物中搾油、熱轉換、生物轉換</strong>
-                    </h4>
-                    <h4 class="mt-3">
-                        害羞內向，喜歡閱讀各式各樣的書籍，因此十分聰明，能用許多知識將廢棄物循環利用，也能用廢食用油轉化為生質柴油、利用廢水養殖微藻並生產各式燃料。
-                    </h4>
-                    <div class="button mt-5">
-                        <a href="#video06" class="btn">與探員繼續出任務</a>
-                        <a href="#character06" class="btn cha_detail" data-toggle="modal" data-target="#character-comic06">來更加了解他吧</a>
-                    </div>
-                </div>
-                <div class="col-5 d-flex align-items-center"><img class="chp_img_right" src="images/character_06_0.png" alt="" style=""></div>
-            </div>
-        </div>
-    </article>
+
+
     <article class="sslider" id="game">
         <div class="container">
             <div class="row">
@@ -1649,13 +1707,22 @@
         </div>
     </article>
     <div class="footer">
-        <h6>©2019 能源守護者 Energy Guard - 能源知識教學網</h6>
+        <h6>©2019 能源守護者 Energy Guard - 能源知識教學網<br>
+            建議使用Google Chrome或Mozilla Firefox，並將螢幕解析度設定為1920*1080，以獲得最佳瀏覽效果
+        </h6>
+
+        <a href="#" id="gotop">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <!--<div id="gotop2">
+            <a href="#">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>-->
     </div>
 </section>
 
-<a href="#" id="gotop">
-    <i class="fa fa-angle-up"></i>
-</a>
+
 
 
 
@@ -1833,6 +1900,17 @@
             }
         });
     });
+
+    $(function () {
+        /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop2按鈕出現 */
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 700){
+                $('#gotop2').fadeIn();
+            } else {
+                $('#gotop2').fadeOut();
+            }
+        });
+    })
 </script>
 
 <!--滾動浮現-->
