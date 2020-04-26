@@ -736,21 +736,23 @@
 
         .videoarrow{
             position: absolute;
-            top: 80px;
-            right: -130px;
-            opacity: 0;
-            -webkit-animation-name: fadeIn,baloon_2;
-            animation-name: fadeIn,baloon_2;
-            -webkit-animation-duration: 7s,3s;
-            animation-duration: 7s,3s;
-            -webkit-animation-iteration-count:1,infinite;
-            animation-iteration-count:1,infinite;
+            z-index: -30;
+            height: 100%;
+            /*top:  -15px;
+            right: -100px;*/
+            -webkit-animation-name: baloon_2;
+            animation-name: baloon_2;
+            -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
             -webkit-animation-fill-mode: forwards ;
             animation-fill-mode: forwards ;
-            animation-delay: 1s;
-            -webkit-animation-delay: 1s;
-            -o-animation-delay: 1s;
-            -moz-animation-delay: 1s;  /**延迟动画**/
+        }
+        .videoarrow:hover{
+            right: -130px;
+            -webkit-animation-name: none;
+            animation-name: none;
         }
         .videotitle{
             text-align: center;
@@ -1460,25 +1462,24 @@
             <div class="row pt-3">
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
-                        <img src="images/水問題1.png" alt="" width="100%">
-                        <img src="images/水問題2.png" alt="" width="100%">
-                        <img src="images/水問題3.png" alt="" width="100%">
+                        <a href="#video" onclick="setCurTime1_1()"><img src="images/水問題1.png" alt="" width="100%"></a>
+                        <a href="#video" onclick="setCurTime1_2()"><img src="images/水問題2.png" alt="" width="100%"></a>
+                        <a href="#video" onclick="setCurTime1_3()"><img src="images/水問題3.png" alt="" width="100%"></a>
                         <img src="images/水問題4.png" alt="" width="100%">
-                        <button onclick="setCurTime()" type="button">设置时间位置为5秒</button>
                     </div>
                 </div>
                 <div class="col-8 videoframe">
                     <div class="swiper-slide" style="">
                         <div class="outgroung"><img src="images/水能_title_2.PNG" alt="" width="100%"></div>
-                        <video id="myVideo" width="100%" height="100%" controls>
+                        <video id="myVideo-1" width="100%" height="100%" controls>
                             <source src="video/Fin.mp4" type="video/mp4">
                         </video>
                     </div>
-                </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic01">
-                        <img src="images/認識水能探員.png" alt="" width=230px>
-                    </a>
+                    <div class="videoarrow">
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic01">
+                            <img src="images/認識水能探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1492,24 +1493,24 @@
             <div class="row pt-3">
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
-                        <img src="images/化石問題1.png" alt="" width="100%">
-                        <img src="images/化石問題2.png" alt="" width="100%">
-                        <img src="images/化石問題3.png" alt="" width="100%">
+                        <a href="#video02" onclick="setCurTime2_1()"><img src="images/化石問題1.png" alt="" width="100%"></a>
+                        <a href="#video02" onclick="setCurTime2_2()"><img src="images/化石問題2.png" alt="" width="100%"></a>
+                        <a href="#video02" onclick="setCurTime2_3()"><img src="images/化石問題3.png" alt="" width="100%"></a>
                         <img src="images/化石問題4.png" alt="" width="100%">
                     </div>
                 </div>
                 <div class="col-8 videoframe">
                     <div class="swiper-slide" style="">
                         <div class="outgroung"><img src="images/化石_title_2.PNG" alt="" width="100%"></div>
-                        <video width="100%" height="100%" controls>
+                        <video id="myvideo-2" width="100%" height="100%" controls>
                             <source src="video/Fin_化石.mp4" type="video/mp4">
                         </video>
                     </div>
-                </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic02">
-                        <img src="images/認識化石探員.png" alt="" width=230px>
-                    </a>
+                    <div class="videoarrow">
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic02">
+                            <img src="images/認識化石探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1536,14 +1537,13 @@
                             <source src="video/Fin_太陽.mp4" type="video/mp4">
                         </video>
                     </div>
-                </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic03">
-                        <img src="images/認識太陽能探員.png" alt="" width=230px>
-                    </a>
+                    <div class="videoarrow">
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic03">
+                            <img src="images/認識太陽能探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </article>
     <article class="sslider" id="video04">
@@ -1566,11 +1566,11 @@
                             <img src="images/風能_title_2.PNG" alt="" width="100%">
                         </div>
                     </a>
-                </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic04">
-                        <img src="images/認識風能探員.png" alt="" width=230px>
-                    </a>
+                    <div class="videoarrow">
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic04">
+                            <img src="images/認識風能探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -1596,14 +1596,13 @@
                             <img src="images/核能_title_2.png" alt="" width="100%">
                         </div>
                     </a>
-                </div>
-                <div class="col-1 pt-5 videoarrow" >
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic05">
-                        <img src="images/認識核能探員.png" alt="" width=230px>
-                    </a>
+                    <div class="videoarrow" >
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic05">
+                            <img src="images/認識核能探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </article>
     <article class="sslider" id="video06">
@@ -1626,14 +1625,13 @@
                             <img src="images/生質能_title_2.png" alt="" width="100%">
                         </div>
                     </a>
-                </div>
-                <div class="col-1 pt-5 videoarrow">
-                    <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic06">
-                        <img src="images/認識生質能探員.png" alt="" width="230px">
-                    </a>
+                    <div class="videoarrow">
+                        <a href="#" class="cha_detail" data-toggle="modal" data-target="#character-comic06">
+                            <img src="images/認識生質能探員.png" alt="" height="100%">
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </div>
     </article>
 
@@ -1733,6 +1731,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
 <script src="js/jquery.parallaxify.min.js"></script>
+
+<script type="text/javascript" src="scripts/videotime.js"></script>
 
 <script type="text/javascript" src="scripts/htm5game.matchgame.js"></script>
 <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
@@ -1991,17 +1991,7 @@
 
 </script>
 
-<scrip>
-    <script>
-        var x = document.getElementById("myVideo");
-        function getCurTime(){
-            alert(x.currentTime);
-        }
-        function setCurTime(){
-            x.currentTime = 5;
-        }
-    </script>
-</scrip>
+
 
 </body>
 </html>

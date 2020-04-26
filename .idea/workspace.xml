@@ -26,14 +26,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49326804">
+    <splitter split-orientation="horizontal" split-proportion="0.42656058">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="770">
-                  <caret line="702" column="20" lean-forward="true" selection-start-line="702" selection-start-column="20" selection-end-line="702" selection-end-column="26" />
+                <state relative-caret-position="-1048">
+                  <caret line="1734" column="67" lean-forward="true" selection-start-line="1734" selection-start-column="67" selection-end-line="1734" selection-end-column="67" />
                   <folding>
                     <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="e#24863#24870#1" expanded="true" />
@@ -67,12 +67,40 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scripts/videotime.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="648">
+                  <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/jquery-1.11.1.min.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/scripts/htm5game.matchgame.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1560">
+                  <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/character.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="840" column="47" selection-start-line="840" selection-start-column="47" selection-end-line="840" selection-end-column="47" />
+                <state relative-caret-position="376">
+                  <caret line="742" column="23" lean-forward="true" selection-start-line="742" selection-start-column="23" selection-end-line="742" selection-end-column="23" />
                   <folding>
-                    <element signature="n#head#0;n#html#0;n#!!top" />
                     <element signature="n#article#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#article#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#article#2;n#body#0;n#html#0;n#!!top" />
@@ -84,15 +112,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/styles/RWD.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="696">
-                  <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -100,8 +119,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="498">
-                  <caret line="1472" column="54" selection-start-line="1472" selection-start-column="41" selection-end-line="1472" selection-end-column="54" />
+                <state relative-caret-position="176">
+                  <caret line="1493" column="50" lean-forward="true" selection-start-line="1493" selection-start-column="50" selection-end-line="1493" selection-end-column="50" />
                   <folding>
                     <element signature="n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="e#35669#46969#0" />
@@ -142,13 +161,12 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sslider</find>
-      <find>arr</find>
       <find>chh</find>
       <find>cardd</find>
       <find>cards</find>
@@ -177,6 +195,8 @@
       <find>hp_img_left</find>
       <find>chp_img_right</find>
       <find>chp_img_</find>
+      <find>videoarrow</find>
+      <find>baloon_2</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -194,15 +214,16 @@
         <option value="$PROJECT_DIR$/tt.html" />
         <option value="$PROJECT_DIR$/styles/matchgame.css" />
         <option value="$PROJECT_DIR$/js/htm5game.matchgame.js" />
-        <option value="$PROJECT_DIR$/styles/animation.css" />
         <option value="$PROJECT_DIR$/styles/all_css.css" />
         <option value="$PROJECT_DIR$/styles/idea_css.css" />
         <option value="$PROJECT_DIR$/styles/RWD_idea.css" />
         <option value="$PROJECT_DIR$/idea.html" />
         <option value="$PROJECT_DIR$/styles/filpcard.css" />
+        <option value="$PROJECT_DIR$/character.html" />
+        <option value="$PROJECT_DIR$/styles/animation.css" />
         <option value="$PROJECT_DIR$/styles/RWD.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/character.html" />
+        <option value="$PROJECT_DIR$/scripts/videotime.js" />
       </list>
     </option>
   </component>
@@ -321,12 +342,12 @@
       <workItem from="1584415954691" duration="622000" />
       <workItem from="1584848526032" duration="1484000" />
       <workItem from="1587224858577" duration="8040000" />
-      <workItem from="1587656680809" duration="25521000" />
+      <workItem from="1587656680809" duration="32172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="374206000" />
+    <option name="totallyTimeSpent" value="380857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -361,24 +382,8 @@
     <entry file="file://$PROJECT_DIR$/../edu_energy_guard - 複製/index.html" />
     <entry file="file://$USER_HOME$/Desktop/html5-card-remove-game/index.html" />
     <entry file="file://$PROJECT_DIR$/test.html" />
-    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.11.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game _01.html" />
     <entry file="file://$PROJECT_DIR$/index_0417.html" />
-    <entry file="file://$PROJECT_DIR$/scripts/htm5game.matchgame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../edu_energy_guard/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -514,24 +519,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/embed.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/styles/animation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="448">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/RWD.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="-485">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/character.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="742" column="23" lean-forward="true" selection-start-line="742" selection-start-column="23" selection-end-line="742" selection-end-column="23" />
+          <folding>
+            <element signature="n#article#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#article#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#article#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#article#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#article#4;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#article#5;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/jquery-1.11.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/htm5game.matchgame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="702" column="20" lean-forward="true" selection-start-line="702" selection-start-column="20" selection-end-line="702" selection-end-column="26" />
+        <state relative-caret-position="-1048">
+          <caret line="1734" column="67" lean-forward="true" selection-start-line="1734" selection-start-column="67" selection-end-line="1734" selection-end-column="67" />
           <folding>
             <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
             <element signature="e#24863#24870#1" expanded="true" />
@@ -563,19 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/character.html">
+    <entry file="file://$PROJECT_DIR$/scripts/videotime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="840" column="47" selection-start-line="840" selection-start-column="47" selection-end-line="840" selection-end-column="47" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#article#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#article#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#article#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#article#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#article#4;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#article#5;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="648">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
         </state>
       </provider>
     </entry>
