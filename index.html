@@ -171,15 +171,13 @@
         .outgroung{
             z-index: 99;
             position: absolute;
+            width: 100%;
             top:0;
             left: 0;
-            display: none;
+            display: block;
         }
-        .outgroung:hover{
+        .outgroung.hover{
             display: none;
-        }
-        .videoframe>.swiper-slide:active>.outgroung{
-
         }
 
         .comicbody{
@@ -465,13 +463,13 @@
 
         .chh-l{
             position:absolute;
-            left: -250px;
-            top:-90px;
+            left: -200px;
+            top:-60px;
         }
         .chh-r{
             position:absolute;
-            right: -250px;
-            top:-90px;
+            right: -200px;
+            top:-60px;
         }
 
         @-webkit-keyframes fadeIn {
@@ -734,6 +732,12 @@
             left: -50px;
         }
 
+        .QA>a>img:hover{
+            -webkit-filter: drop-shadow(0px 0px 25px rgba(250,250,250,1));
+            filter: drop-shadow(0px 0px 25px rgba(250,250,250,1));
+            color: ;
+        }
+
         .videoarrow{
             position: absolute;
             z-index: -30;
@@ -766,7 +770,14 @@
             padding-left: 10px;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-
+            z-index: 1;
+        }
+        .videotitle2{
+            position: absolute;
+            left: 20px;
+            background-color: #38295b;
+            height: 100%;
+            width: 20px;
         }
 
 
@@ -1354,27 +1365,27 @@
                 <div class="Planet">
                     <div class="pp planer01">
                         <a href="#video" class="pagebtn"><img class="click_p01" src="images/planet01-01.png" width="100%"/></a>
-                        <img class="chh01 chh-l" src="images/水能星星去背.png" alt="" width="150%">
+                        <img class="chh01 chh-l" src="images/水能星星去背.png" alt="" width="110%">
                     </div>
                     <div class="pp planer02">
                         <a href="#video04" class="pagebtn"><img class="click_p02" src="images/planet02-01.png" width="100%"/></a>
-                        <img class="chh02 chh-l" src="images/風能星星去背.png" alt="" width="200%">
+                        <img class="chh02 chh-l" src="images/風能星星去背.png" alt="" width="160%">
                     </div>
                     <div class="pp planer03">
                         <a href="#video02" class="pagebtn"><img class="click_p03" src="images/planet03-01.png" width="100%"/></a>
-                        <img class="chh03 chh-l" src="images/化石燃料星星去背.png" alt="" width="150%">
+                        <img class="chh03 chh-l" src="images/化石燃料星星去背.png" alt="" width="110%">
                     </div>
                     <div class="pp planer04">
                         <a href="#video03" class="pagebtn"><img class="click_p04" src="images/planet04-01.png" width="100%"/></a>
-                        <img class="chh04 chh-r" src="images/太陽能星星去背.png" alt="" width="200%">
+                        <img class="chh04 chh-r" style="right: -250px;" src="images/太陽能星星去背.png" alt="" width="160%">
                     </div>
                     <div class="pp planer05">
                         <a href="#video05" class="pagebtn"><img class="click_p05" src="images/planet05-01.png" width="100%"/></a>
-                        <img class="chh05 chh-r" src="images/核能星星去背.png" alt="" width="150%">
+                        <img class="chh05 chh-r" src="images/核能星星去背.png" alt="" width="110%">
                     </div>
                     <div class="pp planer06">
                         <a href="#video06" class="pagebtn"><img class="click_p06" src="images/planet06-01.png" width="100%"/></a>
-                        <img class="chh06 chh-r" src="images/生值能星星去背.png" alt="" width="150%">
+                        <img class="chh06 chh-r" src="images/生值能星星去背.png" alt="" width="110%">
                     </div>
                 </div>
             </div>
@@ -1439,11 +1450,11 @@
             <div class="row pt-5">
                 <h1></h1>
             </div>
-            <div class="row pt-5">
+            <div class="row">
                 <div class="col-1"></div>
-                <div class="col-12 videoframe" style="">
-                    <h1 style="color: #FFFFFF;text-align: center">能 源 危 機</h1>
-                    <img class="introoo" src="" alt="" style="position: absolute;top: 0;width: 99%;">
+                <div class="col-10 videoframe" style="">
+                    <h1 style="color: #FFFFFF;text-align: center;padding:5px">能 源 危 機</h1>
+                    <img class="introoo" src="" alt="" style="position: absolute;top: 0;width: 100%;">
                     <video width="100%" controls style="top: 0;">
                         <source src="video/前導片.mp4" type="video/mp4">
                     </video>
@@ -1468,7 +1479,7 @@
                         <img src="images/水問題4.png" alt="" width="100%">
                     </div>
                 </div>
-                <div class="col-8 videoframe">
+                <div class="col-8 videoframe vv1">
                     <div class="swiper-slide" style="">
                         <div class="outgroung"><img src="images/水能_title_2.PNG" alt="" width="100%"></div>
                         <video id="myVideo-1" width="100%" height="100%" controls>
@@ -1499,7 +1510,7 @@
                         <img src="images/化石問題4.png" alt="" width="100%">
                     </div>
                 </div>
-                <div class="col-8 videoframe">
+                <div class="col-8 videoframe vv2">
                     <div class="swiper-slide" style="">
                         <div class="outgroung"><img src="images/化石_title_2.PNG" alt="" width="100%"></div>
                         <video id="myVideo-2" width="100%" height="100%" controls>
@@ -1530,7 +1541,7 @@
                         <img src="images/太陽問題4.png" alt="" width="100%">
                     </div>
                 </div>
-                <div class="col-8 videoframe">
+                <div class="col-8 videoframe vv3">
                     <div class="swiper-slide" style="">
                         <div class="outgroung"><img src="images/太陽能_title_2.PNG" alt="" width="100%"></div>
                         <video id="myVideo-3" width="100%" height="100%" controls>
@@ -1554,9 +1565,10 @@
             <div class="row pt-3">
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
-                        <img src="images/風問題1.png" alt="" width="100%">
-                        <img src="images/風問題2.png" alt="" width="100%">
-                        <img src="images/風問題3.png" alt="" width="100%">
+                        <a href="#video04" class=" cha_detail comicbody" data-toggle="modal" data-target="#character-comic02_1" style="">
+                            <img src="images/風問題1.png" alt="" width="100%"></a>
+                        <a href="#video04" class=" cha_detail comicbody" data-toggle="modal" data-target="#character-comic02_1" style="">
+                            <img src="images/風問題2.png" alt="" width="100%"></a>
                         <img src="images/風問題4.png" alt="" width="100%">
                     </div>
                 </div>
@@ -1584,9 +1596,12 @@
             <div class="row pt-3">
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
-                        <img src="images/核問題1.png" alt="" width="100%">
-                        <img src="images/核問題2.png" alt="" width="100%">
-                        <img src="images/核問題3.png" alt="" width="100%">
+                        <a href="#video05" class="cha_detail comicbody" data-toggle="modal" data-target="#character-comic03_1" style="">
+                            <img src="images/核問題1.png" alt="" width="100%"></a>
+                        <a href="#video05" class="cha_detail comicbody" data-toggle="modal" data-target="#character-comic03_1" style="">
+                            <img src="images/核問題2.png" alt="" width="100%"></a>
+                        <a href="#video05" class="cha_detail comicbody" data-toggle="modal" data-target="#character-comic03_1" style="">
+                            <img src="images/核問題3.png" alt="" width="100%"></a>
                         <img src="images/核問題4.png" alt="" width="100%">
                     </div>
                 </div>
@@ -1613,8 +1628,10 @@
             <div class="row pt-3">
                 <div class="col-4 pt-5 videotext">
                     <div class="QA">
-                        <img src="images/生質問題1.png" alt="" width="100%">
-                        <img src="images/生質問題2.png" alt="" width="100%">
+                        <a href="#video05" class="cha_detail comicbody" data-toggle="modal" data-target="#character-comic04_1" style="">
+                            <img src="images/生質問題1.png" alt="" width="100%"></a>
+                        <a href="#video05" class="cha_detail comicbody" data-toggle="modal" data-target="#character-comic04_1" style="">
+                            <img src="images/生質問題2.png" alt="" width="100%"></a>
                         <img src="images/生質問題3.png" alt="" width="100%">
                         <img src="images/生質問題4.png" alt="" width="100%">
                     </div>
@@ -1988,6 +2005,24 @@
     }, function() {
         $(".chh06").removeClass("onhover");
     });
+
+
+    $(".vv1").hover(function() {
+        $(".vv1>div>.outgroung").addClass("hover");
+    }, function() {
+        setTimeout(function(){ $(".vv1>div>.outgroung").removeClass("hover"); }, 245000);
+    });
+    $(".vv2").hover(function() {
+        $(".vv2>div>.outgroung").addClass("hover");
+    }, function() {
+        setTimeout(function(){ $(".vv2>div>.outgroung").removeClass("hover"); }, 161000);
+    });
+    $(".vv3").hover(function() {
+        $(".vv3>div>.outgroung").addClass("hover");
+    }, function() {
+        setTimeout(function(){ $(".vv3>div>.outgroung").removeClass("hover"); }, 149000);
+    });
+
 
 </script>
 
